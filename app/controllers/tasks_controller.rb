@@ -10,12 +10,13 @@ class TasksController < ApplicationController
   # GET /tasks/1
   # GET /tasks/1.json
   def show
+    @task = Task.find(params[:id])
   end
 
   # POST /tasks
   # POST /tasks.json
   def create
-    @task = Task.new(task_params)
+    @task = Task.new(params[:id])
 
     if @task.save
       render :show, status: :created, location: @task
@@ -27,6 +28,9 @@ class TasksController < ApplicationController
   # PATCH/PUT /tasks/1
   # PATCH/PUT /tasks/1.json
   def update
+    # 対象のレコードを探す
+    @task = Task.find(params[:id])
+
     if @task.update(task_params)
       render :show, status: :ok, location: @task
     else
@@ -37,6 +41,9 @@ class TasksController < ApplicationController
   # DELETE /tasks/1
   # DELETE /tasks/1.json
   def destroy
+    # 対象のレコードを探す
+    @task = Task.find(params[:id])
+    # 探してきたレコードを削除する
     @task.destroy
   end
 
