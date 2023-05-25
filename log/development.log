@@ -503,3 +503,167 @@ NoMethodError (undefined method `all' for ActiveSupport::Callbacks::Callback:Cla
                          ^^^^):
   
 app/controllers/callbacks_controller.rb:3:in `index'
+Started POST "/callbacks.json" for ::1 at 2023-05-25 22:22:33 +0900
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by CallbacksController#create as JSON
+  Parameters: {"body"=>"xxx"}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms | Allocations: 1725)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: callback
+Did you mean?  controller
+               format
+               action
+               body):
+  
+app/controllers/callbacks_controller.rb:44:in `callback_params'
+app/controllers/callbacks_controller.rb:14:in `create'
+Started POST "/callbacks.json" for ::1 at 2023-05-25 22:44:04 +0900
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by CallbacksController#create as JSON
+  Parameters: {"body"=>"xxx"}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms | Allocations: 1725)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: callback
+Did you mean?  controller
+               format
+               action
+               body):
+  
+app/controllers/callbacks_controller.rb:44:in `callback_params'
+app/controllers/callbacks_controller.rb:14:in `create'
+Started POST "/tasks.json" for ::1 at 2023-05-25 22:51:25 +0900
+Processing by TasksController#create as JSON
+  Parameters: {"body"=>"xxx"}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:21:in `create'
+  [1m[36mTask Create (1.6ms)[0m  [1m[32mINSERT INTO `tasks` (`created_at`, `updated_at`) VALUES ('2023-05-25 13:51:26.023970', '2023-05-25 13:51:26.023970')[0m
+  ↳ app/controllers/tasks_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:21:in `create'
+  Rendering tasks/show.json.jbuilder
+  Rendered tasks/_task.json.jbuilder (Duration: 0.7ms | Allocations: 302)
+  Rendered tasks/show.json.jbuilder (Duration: 1.9ms | Allocations: 957)
+Completed 201 Created in 55ms (Views: 7.9ms | ActiveRecord: 18.1ms | Allocations: 12968)
+
+
+Started POST "/callback.json" for ::1 at 2023-05-25 22:56:25 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/callback.json"):
+  
+Started POST "/callbacks.json" for ::1 at 2023-05-25 22:59:42 +0900
+Processing by CallbacksController#create as JSON
+  Parameters: {"body"=>"xxx"}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 1ms (Allocations: 518)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: callback
+Did you mean?  controller
+               format
+               action
+               body):
+  
+app/controllers/callbacks_controller.rb:44:in `callback_params'
+app/controllers/callbacks_controller.rb:14:in `create'
+Started POST "/callbacks.json" for ::1 at 2023-05-25 23:05:01 +0900
+Processing by CallbacksController#create as JSON
+  Parameters: {"body"=>"xxx"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 0ms (Allocations: 550)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 5)):
+  
+app/controllers/callbacks_controller.rb:14:in `new'
+app/controllers/callbacks_controller.rb:14:in `create'
+Started POST "/callbacks.json" for ::1 at 2023-05-25 23:15:54 +0900
+Processing by CallbacksController#create as JSON
+  Parameters: {"body"=>"xxx"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 1ms (Allocations: 452)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 5)):
+  
+app/controllers/callbacks_controller.rb:14:in `new'
+app/controllers/callbacks_controller.rb:14:in `create'
+Started POST "/callbacks.json" for ::1 at 2023-05-25 23:20:43 +0900
+Processing by CallbacksController#create as JSON
+  Parameters: {"body"=>"xxx"}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 0ms (Allocations: 581)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: callback
+Did you mean?  controller
+               format
+               action
+               body):
+  
+app/controllers/callbacks_controller.rb:44:in `callback_params'
+app/controllers/callbacks_controller.rb:14:in `create'
+Started POST "/callback" for ::1 at 2023-05-25 23:33:53 +0900
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by LineBotController#callback as */*
+  Parameters: {"body"=>"xxx"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2350)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x0000000110129100>
+
+    binding.pry
+           ^^^^
+Did you mean?  try):
+  
+app/controllers/line_bot_controller.rb:5:in `callback'
+Started POST "/callback" for ::1 at 2023-05-25 23:35:16 +0900
+Processing by LineBotController#callback as */*
+  Parameters: {"body"=>"xxx"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1252)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x000000010fe20e90>
+
+    binding.pry
+           ^^^^
+Did you mean?  try):
+  
+app/controllers/line_bot_controller.rb:5:in `callback'
+Started POST "/callback" for ::1 at 2023-05-25 23:35:24 +0900
+Processing by LineBotController#callback as */*
+  Parameters: {"body"=>"xxx"}
+Can't verify CSRF token authenticity.
+No template found for LineBotController#callback, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 1853)
+
+
+Started POST "/callback" for ::1 at 2023-05-25 23:46:55 +0900
+Processing by LineBotController#callback as */*
+  Parameters: {"body"=>"xxx"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 1ms (Allocations: 1165)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x000000011155bbf0>
+
+    binding.pry
+           ^^^^
+Did you mean?  try):
+  
+app/controllers/line_bot_controller.rb:5:in `callback'
