@@ -73,4 +73,7 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+
+  # ngrok を立ち上げた際に発行される URL のドメイン部分（https:// 以降)を以下のように記載する
+  config.hosts = ["36eb-2001-268-c281-6870-b4d8-13e3-b8f5-313d.jp.ngrok.io", "localhost"]
 end
