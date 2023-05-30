@@ -9,6 +9,7 @@
 # migrations use external dependencies or application code.
 #
 # It's strongly recommended that you check this file into your version control system.
+protect_from_forgery with: :null_session
 
 ActiveRecord::Schema.define(version: 2023_05_22_141759) do
 
